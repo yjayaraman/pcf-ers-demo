@@ -9,4 +9,4 @@ inputs:
 - name: pcf-ers-demo
 
 run:
-  path: ./pcf-ers-demo/concourse/tasks/unit-test.sh
+  path: ./pcf-ers-demo/ci/tasks/unit-test.sh

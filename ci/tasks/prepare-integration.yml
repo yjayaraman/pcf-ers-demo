@@ -14,7 +14,7 @@ outputs:
   - name: prepare-integration
 
 run:
-  path: ./pcf-ers-demo/concourse/tasks/prepare-integration.sh
+  path: ./pcf-ers-demo/ci/tasks/prepare-integration.sh
   args: [
     --input-dir, candidate-release,
     --output-dir, prepare-integration,

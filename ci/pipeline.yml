@@ -51,7 +51,7 @@ jobs:
   - get: pcf-ers-demo
     trigger: true
   - task: unit-test
-    file: pcf-ers-demo/concourse/tasks/unit-test.yml
+    file: pcf-ers-demo/ci/tasks/unit-test.yml
 
 - name: build-rc
   serial_groups: [version]
@@ -62,7 +62,7 @@ jobs:
   - get: version
     params: {pre: rc}
   - task: build
-    file: pcf-ers-demo/concourse/tasks/build.yml
+    file: pcf-ers-demo/ci/tasks/build.yml
   - put: candidate-release
     params: {file: build/pcf-ers-demo-*.jar}
   - put: version
@@ -79,7 +79,7 @@ jobs:
     trigger: true
   - get: version
   - task: prepare-integration
-    file: pcf-ers-demo/concourse/tasks/prepare-integration.yml
+    file: pcf-ers-demo/ci/tasks/prepare-integration.yml
   - put: cf
     params:
           manifest: prepare-integration/manifest.yml

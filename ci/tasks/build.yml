@@ -13,7 +13,7 @@ outputs:
   - name: build
 
 run:
-  path: ./pcf-ers-demo/concourse/tasks/build.sh
+  path: ./pcf-ers-demo/ci/tasks/build.sh
   args: [
     --input-dir, pcf-ers-demo,
     --output-dir, build,
