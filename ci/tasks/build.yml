@@ -1,0 +1,23 @@
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: stephenreed/jenkins-java8-maven-git
+    tag: latest
+
+inputs:
+  - name: pcf-ers-demo
+  - name: version
+
+outputs:
+  - name: build
+
+run:
+  path: ./pcf-ers-demo/concourse/tasks/build.sh
+  args: [
+    --input-dir, pcf-ers-demo,
+    --output-dir, build,
+    --version-file, version/number,
+    --artifactId, pcf-ers-demo,
+    --packaging, jar
+  ]

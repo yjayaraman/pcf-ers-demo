@@ -1,0 +1,16 @@
+github-uri: https://github.com/yjayaraman-pivotal/pcf-ers-demo
+github-branch: master
+s3-access-key-id: AKIAIJFLBGK3K4EUOMYA  # AWS or S3 compatible access key id
+s3-secret-access-key: 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  # AWS or S3 compatible secret access key
+s3-endpoint: s3.amazonaws.com
+s3-bucket-version: attendee-releases  # Create and change this to your own S3 bucket
+s3-bucket-releases: attendee-releases  # Create and change this to your own S3 bucket
+s3-bucket-release-candidates: attendee-release-candidates  # Create and change this to your own S3 bucket
+maven-opts: # -Xms256m -Xmx512m
+maven-config: # -s path/to/settings.xml
+cf-api: https://api.run.pivotal.io  # Change the following to match your Cloud Foundry environment
+cf-username: yjayaraman@pivotal.io
+cf-password: A!m4P3rfectn
+cf-org: Northeast / Canada
+cf-space: development
+cf-manifest-host: pcf-ers-demo-ci
