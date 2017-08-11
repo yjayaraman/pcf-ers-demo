@@ -10,7 +10,8 @@ spring:
   application:
     name: attendees
     
-# Using macros that are replaced by maven build
+# Dummy comment
+# Using macros that are replaced by maven build 
 info:
   build:
     artifact: @project.artifactId@
