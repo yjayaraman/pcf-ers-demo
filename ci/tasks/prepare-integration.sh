@@ -71,7 +71,7 @@ echo $artifactName
 echo $appName
 
 inputArtifact="$inputDir/$artifactName"
-outputArtifact="$outputDir/$artifactName"
+outputArtifact="$outputDir/attendees.jar"
 
 
 if [ ! -f "$inputArtifact" ]; then
