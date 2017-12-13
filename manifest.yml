@@ -1,12 +1,9 @@
 ---
 applications:
 - name: attendees
-  host: attendees-concourse-yj
+- host: attendees-concourse-demo
   memory: 1G
   instances: 1
-  path: target/attendees.jar
-#  buildpack: java_buildpack
-#  services:
-#  - attendees-db
+  path: target/attendee.jar
   env:
     SPRING_PROFILES_ACTIVE: cloud
