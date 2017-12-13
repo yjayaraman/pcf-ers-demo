@@ -89,7 +89,7 @@ cp $manifest $outputManifest
 sed -i -- "s|path: .*$|path: $artifactName|g" $outputManifest
 
 
-sed -i "s|name: .*$|name: $appName|g" $outputManifest
+#sed -i "s|name: .*$|name: $appName|g" $outputManifest
 
 
 cat $outputManifest
