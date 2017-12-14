@@ -64,14 +64,15 @@ fi
 
 version=`cat $versionFile`
 artifactName="${artifactId}-${version}.${packaging}"
-appName="${artifactId}-${version}"
+#appName="${artifactId}-${version}"
+appName="${artifactId}"
 
 echo $version
 echo $artifactName
 echo $appName
 
 inputArtifact="$inputDir/$artifactName"
-outputArtifact="$outputDir/attendees.jar"
+outputArtifact="$outputDir/$artifactName"
 
 
 if [ ! -f "$inputArtifact" ]; then
@@ -90,7 +91,7 @@ cp $manifest $outputManifest
 sed -i -- "/path: .*$/d" $outputManifest
 
 
-#sed -i "s|name: .*$|name: $appName|g" $outputManifest
+sed -i "s|name: .*$|name: $appName|g" $outputManifest
 
 
 cat $outputManifest

@@ -25,15 +25,15 @@ resources:
     secret_access_key: {{s3-secret-access-key}}
     endpoint: {{s3-endpoint}}
 
-- name: final-release
-  type: s3
-  source:
-    bucket: {{s3-bucket-releases}}
-    regexp: pcf-ers-demo-(.*).jar
-    access_key_id: {{s3-access-key-id}}
-    secret_access_key: {{s3-secret-access-key}}
-    endpoint: {{s3-endpoint}}
-
+#- name: final-release
+#  type: s3
+#  source:
+#    bucket: {{s3-bucket-releases}}
+#    regexp: pcf-ers-demo-(.*).jar
+#    access_key_id: {{s3-access-key-id}}
+#    secret_access_key: {{s3-secret-access-key}}
+#    endpoint: {{s3-endpoint}}
+#
 - name: cf
   type: cf
   source:
@@ -82,4 +82,4 @@ jobs:
     file: pcf-ers-demo/ci/tasks/prepare-integration.yml
   - put: cf
     params:
-          manifest: prepare-integration/manifest.yml
+      manifest: prepare-integration/manifest.yml
