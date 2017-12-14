@@ -87,8 +87,8 @@ outputManifest=$outputDir/manifest.yml
 cp $manifest $outputManifest
 
 # the path in the manifest is always relative to the manifest itself
-#sed -i -- "s|path: .*$|path: $artifactName|g" $outputManifest
-sed -i -- "/path: .*$/d" $outputManifest
+sed -i -- "s|path: .*$|path: $artifactName|g" $outputManifest
+#sed -i -- "/path: .*$/d" $outputManifest
 
 
 sed -i "s|name: .*$|name: $appName|g" $outputManifest
