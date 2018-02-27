@@ -1,7 +1,7 @@
 ---
 applications:
 - name: attendees
-  host: attendees-concourse-demo
+  host: attendees-concourse-yj
   memory: 1G
   instances: 1
   path: target/attendee.jar
