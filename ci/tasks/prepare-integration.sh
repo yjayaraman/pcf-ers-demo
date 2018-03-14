@@ -64,8 +64,8 @@ fi
 
 version=`cat $versionFile`
 artifactName="${artifactId}-${version}.${packaging}"
-#appName="${artifactId}-${version}"
-appName="${artifactId}"
+appName="${artifactId}-${version}"
+#appName="${artifactId}"
 
 echo $version
 echo $artifactName
