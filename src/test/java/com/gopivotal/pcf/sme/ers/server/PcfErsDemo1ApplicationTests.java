@@ -33,21 +33,6 @@ public class PcfErsDemo1ApplicationTests {
 	@Test
 	public void attendeeRepository() throws ParseException {
 		
-		attendeeRepository.deleteAll();
-		
-		Attendee a1 = new Attendee();
-		a1.setFirstName("Phil");
-		a1.setLastName("Berman");
-		attendeeRepository.save(a1);
-		
-		a1 = new Attendee();
-		a1.setFirstName("Marcelo");
-		a1.setLastName("Borges");
-		attendeeRepository.save(a1);
-		
-		List<Attendee> attendees = attendeeRepository.findAll();
-		assertThat(attendees.size(), is(2));
-		
 	}
 
 }
