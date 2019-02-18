@@ -115,47 +115,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
-  <groupId>org.apache.maven.plugins</groupId>
-  <artifactId>maven-compiler-plugin</artifactId>
-  <version>3.8.0</version>
-  <configuration>
-    <source>8</source>                                                
-    <target>8</target>                                                
-    <release>8</release>                                              
-    <executable>javac</executable>
-    <fork>false</fork>                            
-    <encoding>UTF-8</encoding>
-    <!-- see https://github.com/rzwitserloot/lombok/issues/985#issuecomment-356135454 -->
-    <compilerArgs>
-        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
-        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.comp=ALL-UNNAMED</arg>
-        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
-        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.main=ALL-UNNAMED</arg>
-        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.model=ALL-UNNAMED</arg>
-        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.parser=ALL-UNNAMED</arg>
-        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
-        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED</arg>
-        <arg>-J--add-opens=jdk.compiler/com.sun.tools.javac.jvm=ALL-UNNAMED</arg>
-    </compilerArgs>
-    <annotationProcessorPaths>
-      <path>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>1.18.2</version>
-      </path>
-    </annotationProcessorPaths>
-    <showWarnings>true</showWarnings>
-  </configuration>
-  <dependencies>                                                         
-    <dependency>                                                       
-      <groupId>org.ow2.asm</groupId>                                 
-      <artifactId>asm</artifactId>                                   
-      <version>6.2</version>
-    </dependency>                                                      
-  </dependencies>
-  </plugin>
 		</plugins>
 	</build>
 

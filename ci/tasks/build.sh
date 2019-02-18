@@ -60,7 +60,7 @@ artifactName="${artifactId}-${version}.${packaging}"
 finalName="${artifactId}-${version}"
 
 cd $inputDir
-mvn clean package -DfinalName=$finalName -Dversion=$version
+mvn clean package -DskipTests -DfinalName=$finalName -Dversion=$version
 
 # Copy war file to concourse output folder
 cd ..
