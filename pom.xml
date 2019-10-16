@@ -118,13 +118,12 @@
 			<plugin>
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-compiler-plugin</artifactId>
-  <version>3.8.0</version>
+  <version>3.8.1</version>
   <configuration>
-    <source>8</source>                                                
-    <target>8</target>                                                
-    <release>8</release>                                              
+    <source>8</source>
+    <target>8</target>                                                                                          
     <executable>javac</executable>
-    <fork>false</fork>                            
+    <fork>false</fork>
     <encoding>UTF-8</encoding>
     <!-- see https://github.com/rzwitserloot/lombok/issues/985#issuecomment-356135454 -->
     <compilerArgs>
@@ -148,12 +147,12 @@
     </annotationProcessorPaths>
     <showWarnings>true</showWarnings>
   </configuration>
-  <dependencies>                                                         
-    <dependency>                                                       
-      <groupId>org.ow2.asm</groupId>                                 
-      <artifactId>asm</artifactId>                                   
+  <dependencies>
+    <dependency>
+      <groupId>org.ow2.asm</groupId>
+      <artifactId>asm</artifactId>
       <version>6.2</version>
-    </dependency>                                                      
+    </dependency>
   </dependencies>
   </plugin>
 		</plugins>
